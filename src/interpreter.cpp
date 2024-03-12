@@ -7,21 +7,16 @@
 
 #include "interpreter.hpp"
 
+// TOOD(lem): Add optional runtime check for (over|under)flows
 std::optional<interpreter_error> interpreter::interpret() {
     while (location < tokens.size()) {
         auto token = tokens[location];
         switch (token.type) {
         case token_type::add:
-            // if (token.operand > static_cast<usize>(UINT8_MAX - memory[pointer]))
-            //     return interpreter_error::char_overflow;
-
             memory[pointer] += token.operand;
             location++;
             break;
         case token_type::sub:
-            // if (token.operand - static_cast<usize>(memory[pointer]) <= 0)
-            //     return interpreter_error::char_overflow;
-
             memory[pointer] -= token.operand;
             location++;
             break;
