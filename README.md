@@ -1,6 +1,6 @@
 A simple [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter and
 compiler that can output [QBE IL](https://c9x.me/compile/) and C. This
-implementation uses 30000 cells with a 8-bit width.
+implementation uses 30.000 8-bit wide cells.
 
 ### Building
 This projects requires a C++ compiler with C++20 or later support. No external
