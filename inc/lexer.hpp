@@ -57,6 +57,6 @@ struct lexer {
         , position_(0) { }
 
     bool is_valid_op(char ch) const;
-     std::optional<char> next();
-     lexer_result get_tokens();
+    std::optional<char> next();
+    lexer_result get_tokens();
 };

@@ -42,7 +42,7 @@ std::optional<interpreter_error> interpreter::interpret() {
             break;
         case token_type::read:
             for (usize i = 0; i < token.operand; i++) {
-                memory[pointer] = static_cast<u8>(getchar());
+                memory[pointer] = static_cast<char>(getchar());
             }
             location++;
             break;

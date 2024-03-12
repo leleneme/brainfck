@@ -136,7 +136,7 @@ std::optional<std::string> read_entire_file(std::string path) {
     contents.resize(file_size);
 
     rewind(fd);
-    fread(&contents[0], sizeof(u8), file_size, fd);
+    fread(&contents[0], sizeof(char), file_size, fd);
 
     fclose(fd);
     return contents;
